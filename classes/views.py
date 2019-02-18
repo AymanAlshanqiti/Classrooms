@@ -23,7 +23,8 @@ def classroom_detail(request, classroom_id):
         return redirect('signin')
 
     classroom = Classroom.objects.get(id=classroom_id)
-    students = classroom.students.all()
+    students = classroom.students.all().order_by('name','-exam_grade')
+
     context = {
         "classroom": classroom,
         "students": students

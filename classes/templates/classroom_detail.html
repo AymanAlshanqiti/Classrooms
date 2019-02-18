@@ -28,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for student in classroom.students.all %}
+                {% for student in students %}
                     <tr>
                     <th scope="row">{{student.id}}</th>
                     <td>{{student.name}}</td>
